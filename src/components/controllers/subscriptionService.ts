@@ -149,7 +149,7 @@ export class SubscriptionService {
       },
     });
 
-    return subscriptions.map((sub) => ({
+    return subscriptions.map((sub) =>
       id: sub.id,
       name: `${sub.provider.name} ${sub.plan.name}`,
       amount: `$${(sub.lastPriceUSD / 100).toFixed(2)}`,
@@ -159,7 +159,7 @@ export class SubscriptionService {
       pendingReason: sub.status === SubscriptionStatus.PAYMENT_PENDING 
         ? 'Payment verification in progress' 
         : undefined,
-      transactionHash: sub.metadata?.transactionHash,
+      transactionHash: transact
     }));
   }
 

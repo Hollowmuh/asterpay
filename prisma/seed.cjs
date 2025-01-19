@@ -1,6 +1,5 @@
 // prisma/seed.ts
 const { PrismaClient, SubscriptionStatus, PaymentStatus } = require('@prisma/client');
-// const { Hash, hash } = require('crypto');
 const prisma = new PrismaClient();
 
 async function main() {
